@@ -3,12 +3,12 @@ from sqlalchemy.orm import Session
 import cloudinary
 import cloudinary.uploader
 
-from src.database.db import get_db
-from src.database.models import User
-from src.repository import users as repository_users
-from src.services.auth import auth_service
-from src.config.config import settings
-from src.schemas import UserDb
+from ...src.database.db import get_db
+from ...src.database.models import User
+from ...src.repository import users as repository_users
+from ...src.services.auth import auth_service
+from ...src.config.config import settings
+from ...src.schemas import UserDb
 
 router = APIRouter(prefix="/users", tags=["users"])
 

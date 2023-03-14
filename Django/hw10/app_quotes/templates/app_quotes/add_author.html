@@ -1,0 +1,52 @@
+{% extends 'app_quotes/base.html' %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="row">
+            <div class="offset-2 col-md-8">
+                <br>
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label class="form-label">
+                            <h3>Fullname:</h3>
+                        </label>
+                        {{ form.fullname }}
+                        <span>{{ form.errors.fullname }}</span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">
+                            <h3>Born Date:</h3>
+                        </label>
+                        {{ form.born_date }}
+                        <span>{{ form.errors.born_date }}</span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">
+                            <h3>Born Location:</h3>
+                        </label>
+                        {{ form.born_location }}
+                        <span>{{ form.errors.born_location }}</span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">
+                            <h3>Biography:</h3>
+                        </label>
+                        {{ form.description }}
+                        <span>{{ form.errors.description }}</span>
+                    </div>
+
+                    <button type="submit" class="btn btn-success btn-lg">Submit</button>
+                    <button type="reset" class="btn btn-secondary btn-lg">Reset</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+   
+{% endblock body %}

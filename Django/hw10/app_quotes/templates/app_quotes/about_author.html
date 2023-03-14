@@ -1,0 +1,23 @@
+{% extends 'app_quote/base.html' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <br>
+                <div class="card">
+                    <div class="card-body">
+                      <h1 class="card-title">{{ author.fullname }}</h1>
+                      <hr>
+                      <h5 class="card-subtitle mb-2 text-muted">Born: {{ author.born_date}} {{ author.born_location}}</h5>
+                      <hr>
+                      <p class="card-text"><h5>Biography:</h5> {{ author.description}} </p>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+{% endblock body %}

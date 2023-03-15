@@ -7,8 +7,9 @@ import sys
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
-sys.path.append(os.path.abspath('..'))
+# sys.path.append(os.path.abspath('..'))
 # sys.path.append(os.path.abspath('../..'))
+sys.path.insert(0, os.path.abspath('../'))
 # sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 project = 'Rest-API Homework 2.14'
 copyright = '2023, SPod'

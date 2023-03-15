@@ -4,11 +4,11 @@ from fastapi import APIRouter, Depends, HTTPException, status, Path
 from fastapi_limiter.depends import RateLimiter
 from sqlalchemy.orm import Session
 
-from ...src.database.db import get_db
-from ...src.database.models import User
-from ...src.repository import contacts as repository_contacts
-from ...src.schemas import ContactModel, ContactResponse
-from ...src.services.auth import auth_service
+from src.database.db import get_db
+from src.database.models import User
+from src.repository import contacts as repository_contacts
+from src.schemas import ContactModel, ContactResponse
+from src.services.auth import auth_service
 
 router = APIRouter(prefix='/contacts', tags=['contacts'])
 

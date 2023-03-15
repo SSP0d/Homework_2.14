@@ -41,7 +41,7 @@ async def update_avatar_user(
             then it will return None and raise HTTPException(status_code=HTTPStatusCode(401),
             detail=&quot;Unauthorized&quot;).
             db (Session): A database
-    
+
     :param file: UploadFile: Upload the file to cloudinary
     :param current_user: User: Get the current user
     :param db: Session: Access the database

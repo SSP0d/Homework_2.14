@@ -12,6 +12,16 @@ database = SessionLocal()
 
 
 def create_contacts(data: ContactModel, db: Session = database):
+    """
+    The create_contacts function creates a new contact in the database.
+        Args:
+            data (ContactModel): The contact to be created.
+            db (Session, optional): A database session object. Defaults to None.
+
+    :param data: ContactModel: Pass in the contact data to be added to the database
+    :param db: Session: Pass the database session to the function
+    :return: The contact that was created
+    """
     contact = Contact(**data.dict())
     db.add(contact)
     db.commit()
@@ -20,6 +30,16 @@ def create_contacts(data: ContactModel, db: Session = database):
 
 
 def create_users(data: UserModel, db: Session = database):
+    """
+    The create_users function creates a new user in the database.
+        Args:
+            data (UserModel): The UserModel object to be created.
+            db (Session, optional): SQLAlchemy Session instance. Defaults to database.
+
+    :param data: UserModel: Specify the type of data that will be passed to the function
+    :param db: Session: Pass a database session to the function
+    :return: The user object
+    """
     user = User(**data.dict())
     db.add(user)
     db.commit()

@@ -1,0 +1,5 @@
+USER_EXISTS_ERROR = 'Account already exists'
+EMAIL_NOT_CONFIRMED = 'Email not confirmed'
+INVALID_PASSWORD = 'Invalid password'
+INVALID_EMAIL = 'Invalid email'
+NOT_FOUND = 'Not found'
